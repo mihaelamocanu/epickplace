@@ -1,0 +1,58 @@
+body,html{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+.center-block {
+    display: block;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+    color: #999;
+}
+
+
+
+.in-height{
+    height:35px;
+    margin:0px;
+    margin-bottom: 10px;
+}
+
+.btn{
+    border:1px solid transparent;
+    margin-top: 20px;
+
+
+}
+
+.email_exists{
+    color:#ff0000;
+}
+.name{
+    width:49.5%;
+}
+
+nav{
+    margin:0px;
+    padding: 0px;
+
+}
+
+.navbar {
+    position: relative;
+    margin:0px;
+    border: 1px solid transparent;
+}
+
+.container{
+    height: 90%;
+    width: 100%;
+    position: absolute;
+    margin:0px;
+    padding: 0px;
+
+}
+.contains{
+   margin-left: 15%;
+}

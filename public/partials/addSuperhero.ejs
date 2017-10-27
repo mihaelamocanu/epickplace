@@ -1,0 +1,177 @@
+
+<div class="row">
+
+	<div class="modal fade" id="modalOneModal" tabindex="-1" role="dialog" aria-labelledby="modalOneLabel" >
+
+		<div class="modal-dialog">
+
+			<div class="modal-content  bg-info" >
+				<div class="modal-header btn-info">
+					<h4 class="modal-title" id="modalOneLabel">Edit Profile</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body" ng-style="style">
+					<div class="row" style="position: unset">
+						<div class="col-md-1"></div>
+						<div class="col-md-10" style="background-color:palegreen;border: 1px;border-color: #4cae4c;">
+
+									<form class="form-horizontal">
+										<div class="form-group">
+
+
+											<label class="control-label col-md-2" for="pwd">Birthday:</label>
+											<div class="col-md-9">
+												<input style="text-align:-moz-center" ng-model="form.birthday" type="text" class="ui-datepicker-trigger form-controlcol-md-9" id="datepicker" class="form-control">
+												<input type="checkbox" ng-model="form.bivis"><label>Visible</label>
+											</div>
+
+										</div>
+										<hr>
+										<div class="form-group">
+
+											<label class="control-label col-sm-2" for="pwd">Occupation:</label>
+											<div class="col-sm-10">
+												<input type="text" ng-model ="form.occupation" list="jobs" class="form-control" id="pwd">
+												<input type="checkbox"ng-model="form.ocvis"><label>Visible</label>
+												<datalist id="jobs">
+													<option  data-ng-repeat="job in jobs" value="{{job}}">
+												</datalist>
+
+											</div>
+										</div>
+										<hr>
+										<div class="form-group" style="display: -moz-box">
+											<label class="control-label col-md-3">I'm an...</label>
+											<div class="col-md-8">
+												<select ng-model="form.type" ng-options="x for x in types">
+												</select>
+												<select ng-model="form.hobby" ng-options="x for x in hobbies">
+												</select>
+											</div>
+										</div>
+										<hr>
+										<div class="" style="align-content: center;">
+											<textarea  ng-model="form.say" style="margin-bottom: 10px;" class="col-md-12" placeholder="Say something about you"></textarea>
+										</div>
+
+									</form>
+
+						</div>
+						<div class="col-md-1"></div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<div style="text-align:center">
+						<md-button  ng-click="editProfile()" data-dismiss="modal" style=" box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);background-color: azure;"class="md-raised">Done</md-button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-4 left-side">
+		<div class="row-hg-4">
+			<div class="row-hg-4"></div>
+			<div class="row-hg-4">
+				<h2 class="up">{{firstname}}</h2>
+				<h2 class="down">{{lastname}}</h2>
+			</div>
+			<div class="row-hg-4">
+			</div>
+
+		</div>
+		<div class="row-hg-4">
+
+			<div id="pop" ng-show="popoverIsVisible" class="bubble"><button type="button" class="close" ng-click="hidePopover()">&times;</button>
+				<textarea>{{form.say}}</textarea></div>
+			<!--<img ng-src="{{getImage()}}" class="circle" ng-click="upload()"/>-->
+
+			<div class="veil" ng-style="{ 'background-image': 'url('+getImage()+')'}">
+				<div class="content" ng-mouseenter="changeVis()" ng-mouseleave="changeHid()">
+					<div class="row-hg-4"></div>
+					<div class="row-hg-4">
+						<img type="button" ng-click="showModal() " ng-style ={visibility:ImgVis} src="../images/edit_profile.png" id="#edit_profile"/>
+					</div>
+					<div class="row-hg-4">
+						<img type="button"  ng-click="upload()" ng-style ={visibility:ImgVis} src="../images/edit_image.png" id="#edit_picture" />
+					</div>
+					<div class="row-hg-4">
+				</div>
+				</div>
+			</div>
+		</div>
+		<div class="row-hg-4">
+				<div class="row-hg-4" style="color: deepskyblue">
+					<span ng-bind="form.type"></span>
+					<span ng-bind="form.hobby"></span>
+				</div>
+				<div class="row-hg-2">
+					<span ng-bind="form.birthday" ng-show="form.bivis"></span>
+
+				</div>
+				<div class="row-hg-2">
+					<span ng-bind="form.occupation" ng-show="form.ocvis"></span>
+				</div>
+				<div class="row-hg-2">
+
+					<p id="say" ng-bind="form.say" ng-show="true" ng-mouseover="showPopover()"></p>
+
+				</div>
+		</div>
+	</div>
+
+	<div class="col-lg-4 right-side">
+
+
+			<div id='carousel-custom' class='carousel slide' data-ride='carousel'>
+
+
+							<div class='carousel-inner'>
+
+								<!--<div class='item active fill'>
+										<div class="dark">
+											<img ng-src={{slides[0]}}>
+										</div>
+									</div>-->
+
+									<div id="active" ng-class="{'active':isCurrentSlideIndex($index)}"  class=' item fill' ng-repeat="slide in slides track by $index" >
+										<div  class="dark">
+											<img ng-src={{slide}} />
+										</div>
+									</div>
+								<ol class='carousel-indicatorss' >
+									<!--<li   class='active'><img ng-src={{slides[0]}} alt='' /></li>-->
+									<li  ng-repeat="s in slides track by $index"
+										 ng-click="setCurrentSlideIndex($index);" ><img ng-src={{s}} alt='' /></li>
+								</ol>
+							</div>
+			</div>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+	$(function(){
+		$('#datepicker').datepicker({
+			inline: true,
+			nextText: '&rarr;',
+			prevText: '&larr;',
+			showOtherMonths: true,
+			dateFormat: 'dd MM yy',
+			dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+			showOn: "button",
+			//buttonImage: "img/calendar-blue.png",
+			//buttonImageOnly: true,
+		});
+	});
+</script>
+
+
+
+
+
+
+
+
+
+

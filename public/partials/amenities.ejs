@@ -1,0 +1,14 @@
+<div id="title">Amenities</div>
+<div id="container">
+    <ul>
+        <li  ng-style="r.isSelected && {'box-shadow':'2px 2px 2px 2px black'}" ng-repeat="r in amenities track by $index">
+            <div id="wrap" ng-click="select($index)">
+                <div class="up"></div>
+                {{r.name}}
+                <div class="up"></div>
+            </div>
+        </li>
+
+    </ul>
+    <button type="submit" ng-click="setAmenities()" id="okro" >OK</button>
+</div>

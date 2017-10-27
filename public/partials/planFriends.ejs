@@ -1,0 +1,26 @@
+<div id="header">
+    <div id="float_left">
+        <ul>
+            <li id="added" ng-repeat="add in added_friends track by $index">
+                <img id="circle" ng-src="{{add.image}}">
+                {{add.newField}}
+                <span class="glyphicon glyphicon-remove" id="search" ng-click="removeFriends($index)"></span>
+
+            </li>
+
+        </ul>
+    </div>
+    <div id="float_right">
+        <input type="text" ng-model="name">
+        <span class="glyphicon glyphicon-search" id="search" ng-click="searchFriends()"></span>
+        <ul id="ufriend"><li ng-repeat="friend in friends track by $index" ng-click="addFriend($index)">
+                <img id="circle" ng-src="{{friend.image}}">
+                {{friend.newField}}</li></ul>
+    </div>
+    <div id="float_down">
+        <input id="title" placeholder="title" type="text" ng-model="title">
+        <textarea id="tarea" ng-model="message" placeholder="say something to them"></textarea>
+    </div>
+
+    <button id="plan" ng-click="submit()">Plan</button>
+</div>

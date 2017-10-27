@@ -1,0 +1,16 @@
+<div id="title">Rooms</div>
+<div id="container">
+    <ul>
+    <li  ng-style="r.isSelected && {'box-shadow':'2px 2px 2px 2px black'}"ng-repeat="r in hotel_rooms track by $index">
+        <div id="wrap" ng-click="selected($index)">
+            <div class="up"></div>
+            {{r.room}}
+
+            <div class="up"></div>
+        </div>
+        <input ng-style="r.isSelected && {'visibility':'visible'}" id="money" type="number" ng-model="r.price" placeholder="euro">
+    </li>
+
+</ul>
+    <button type="submit" ng-click="setRooms()" id="okro" >OK</button>
+</div>

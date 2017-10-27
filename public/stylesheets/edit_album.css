@@ -1,0 +1,94 @@
+html,body{
+    width: 100%;
+}
+
+nav img.circle{
+    border-radius:50%;
+    width: 3%;
+    height: 3%;
+    float: right;
+    margin:0.35%;
+    margin-right: 3%;
+
+}
+
+nav{
+    margin:0px;
+    padding: 0px;
+
+}
+
+.navbar {
+    position: relative;
+    margin:0px;
+    border: 1px solid transparent;
+}
+input{
+    margin:1%;
+    width:40%;
+    position:absolute;top:10%;
+    opacity: 0.8;
+    box-shadow: 0 4px 8px 0 rgba(1, 1, 1, 0.2), 0 6px 20px 0 rgba(1, 1, 1, 0.19);
+}
+.modal-body{
+    padding:0px;
+}
+textarea{
+    box-shadow: 0 4px 8px 0 rgba(1, 1, 1, 0.2), 0 6px 20px 0 rgba(1, 1, 1, 0.19);
+}
+span{
+
+    opacity:0.8;
+    position:absolute;
+    background-color: transparent;
+    font-size:40px;
+    top:45%;
+    margin-left:37%;
+    color:white;
+}
+
+#map {
+    height: 100%;
+    position:absolute;
+}
+.controls {
+    margin-top: 10px;
+    border: 1px solid transparent;
+    border-radius: 2px 0 0 2px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    height: 32px;
+    outline: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#pac-input {
+    background-color: #fff;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    margin-left: 12px;
+    padding: 0 11px 0 13px;
+    text-overflow: ellipsis;
+    width: 300px;
+}
+
+#pac-input:focus {
+    border-color: #4d90fe;
+}
+
+.pac-container {
+    font-family: Roboto;
+}
+
+#type-selector {
+    color: #fff;
+    background-color: #4d90fe;
+    padding: 100px 11px 0px 11px;
+}
+
+#type-selector label {
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 300;
+}

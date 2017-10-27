@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html ng-app="superheroApp">
+<head>
+    <meta charset="utf-8">
+    <title>Superheroes App!</title>
+    <meta name="description" content="Superhero database">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script
+            src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"
+            integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw="
+            crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./stylesheets/profile.css"/>
+    <link rel="stylesheet" href="./stylesheets/normalize.css"/>
+    <link rel="stylesheet" href="./stylesheets/datepicker.css"/>
+
+
+
+    <!-- JS libraries -->
+
+    <script src="./bower_components/angular/angular.js"></script>
+    <script src="./bower_components/angular-route/angular-route.js"></script>
+    <script src="./bower_components/filepicker-js/filepicker.js"></script>
+    <script src="./bower_components/angular-filepicker/dist/angular_filepicker.js"></script>
+    <script src="./bower_components/ng-file-upload/angular-file-upload.min.js"></script>
+    <script src="./bower_components/angularjs/angular.min.js"></script>
+    <script src="./bower_components/ng-file-upload-shim/angular-file-upload-shim.min.js"></script>
+
+
+    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.6.0.js"> </script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.js"></script>
+
+    <!-- Angular files -->
+
+
+    <script src="/javascripts/addSuperheroController.js"></script>
+
+    <script src="/javascripts/galleryController.js"></script>
+
+    <script src="/javascripts/detailController.js"></script>
+
+    <script src="/javascripts/HeroApp.js"></script>
+
+</head>
+<body ng-controller="pickerController">
+
+
+<nav class="navbar navbar-default">
+
+    <div class="navbar-header">
+        <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav">
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">YOU <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="/home/">Profile</a></li>
+                <li><a href="/home/albums">Albums</a></li>
+                <li><a href="#">Page 1-3</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Page 2</a></li>
+    </ul>
+    <img  class="circle" src="/images/pick.jpg" ng-click="showModal()" ng-src="{{superhero.picture.url | fpConvert: {filter:'sharpen', w:500} }}">
+</nav>
+
+
+
+
+<!-- Here is where the partials will be displayed -->
+<div ng-view></div>
+
+
+</body>
+
+
+</html>

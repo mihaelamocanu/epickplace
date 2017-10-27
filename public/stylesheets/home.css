@@ -1,0 +1,396 @@
+html,body
+{
+    width: 100%;
+    height: 100%;
+
+}
+nav img.circle{
+    border-radius:50%;
+    width: 3%;
+    height: 3%;
+    float: right;
+    margin:0.35%;
+    margin-right: 3%;
+
+}
+
+nav{
+    margin:0px;
+    padding: 0px;
+}
+
+.navbar {
+
+    margin:0px;
+    border: 1px solid transparent;
+}
+ul { list-style: none; }
+.col-md-8{
+    text-align: center;
+}
+.col-md-8 li{
+    margin:10px;
+    background-color: #FBFBEF;
+    text-align: -webkit-center;
+    text-align: -moz-center;
+}
+div .album{
+    display: block;
+    width:70%;
+    height:auto;
+    /*border:1px solid black;*/
+    background-color: white;
+}
+div .album img{
+    max-width: 100%;
+    max-height: 100%;
+    cursor: pointer;
+    cursor: hand;
+}
+.album div{
+    height:50px;
+}
+#container
+{
+    margin-top: 50px;
+
+
+}
+#cov:hover{
+    opacity:0.5;
+}
+.rowcover{
+    background: url('../images/continent-of-europe.png') no-repeat center center fixed;
+    /* background-image: url('../images/an.gif');*/
+
+    background-attachment: fixed;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0%;
+    overflow-x: hidden;
+
+}
+#panel{
+
+    border:1px solid black;
+    right:-200px;
+    color: white;
+    width:200px;
+    position: absolute;
+    background-color: #1b6d85;
+}
+.ng-scope{
+    height: 100%;
+}
+.col-md-2{
+padding: 0;
+    text-align: center;
+}
+
+.boo {
+    display: inline-block;
+    position: relative;
+}
+.boo:before, .boo:after {
+    position: absolute;
+    right:.1em;
+    width: .3em; height: 0.5em;
+    background: lightblue;
+    content: '';
+}
+.boo:before {
+    top: 0;
+    transform: skewX(30deg);
+
+}
+.boo:after {
+    bottom: 0;
+    transform: skewX(-30deg);
+}
+#arrows{
+    float:right;
+    height:2em;
+    background-color: blue;
+    text-align: center;
+    width: 2em;
+}
+
+#content{
+    /*visibility: hidden;*/
+}
+.booleft{
+    display: inline-block;
+    position: relative;
+
+}
+.booleft:before, .booleft:after {
+    position: absolute;
+    right:.1em;
+    width: .3em; height: 0.5em;
+    background: lightblue;
+    content: '';
+}
+.booleft:before {
+    top: 0;
+    transform: skewX(-30deg);
+
+}
+.booleft:after {
+    bottom: 0;
+    transform: skewX(30deg);
+}
+.mod{
+    height:100%;
+
+}
+#carousel{
+    display: flex;
+}
+#carousel img{
+    width:30%;
+    height: 30%;
+    position: absolute;
+
+}
+.row-hg-8{
+    text-align: center;
+    width:100%;
+    height:70%;
+    position: absolute;
+}
+.row-hg-4{
+    text-align: center;
+    width:100%;
+    height:20%;
+    position: absolute;
+    margin-top: 70%;
+}
+#case{
+    position: absolute;
+    width:100%;
+    height: 100%;
+}
+#case img{
+    max-width: 100%;
+    max-height:100%;
+
+}
+.presentation{
+    height: 100%;
+    margin:0;
+}
+
+
+.responsive-container {
+    position: relative;
+    width: 100%;
+        /*border: 1px solid black;*/
+}
+
+.dummy {
+    padding-top: 71%; /* forces 1:1 aspect ratio */
+}
+
+.img-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    text-align:center; /* Align center inline elements */
+    font: 0/0 a;
+}
+
+.img-container:before {
+    content: ' ';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+.img-container img {
+    vertical-align: middle;
+    display: inline-block;
+    max-width: 100%;
+    max-height: 100%;
+}
+.modal-body{
+    padding: 0;
+}
+#bottom{
+    width:100%;
+    height:20%;
+    bottom: 0px;
+    left:0;
+    right:0;
+    position: absolute;
+    z-index: 10;
+    opacity: 0.5;
+    color:white;
+    background-color: black;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+#header{
+    width:100%;
+    height:7%;
+    top:0;
+    left: 0;
+    right: 0;
+    color:white;
+    background-color: black;
+    padding-left: 20%;
+    padding-right: 20%;
+    position: absolute;
+    z-index: 10;
+    opacity: 0.5;
+    text-align: center;
+}
+
+.boodis1 {
+    display: inline-block;
+    position: relative;
+    top:50%;
+}
+.boodis1:before, .boodis1:after {
+    position: absolute;
+    width: .5em; height: 1.5em;
+    background: lightblue;
+    content: '';
+}
+.boodis1:before {
+    top: 0;
+    transform: skewX(30deg);
+
+}
+.boodis1:after {
+    bottom: 0;
+    transform: skewX(-30deg);
+}
+
+.boodis2 {
+    display: inline-block;
+    position: relative;
+    top:50%;
+}
+.boodis2:before, .boodis2:after {
+    position: absolute;
+    width: .5em; height: 1.5em;
+    background: lightblue;
+    content: '';
+}
+.boodis2:before {
+    top: 0;
+    transform: skewX(-30deg);
+
+}
+.boodis2:after {
+    bottom: 0;
+    transform: skewX(30deg);
+}
+#title{
+    margin-top: 2%;
+    /*position: absolute;*/
+}
+#plane{
+    right:20%;
+    top:2%;
+    width: 30px;
+    height:30px;
+    position: absolute;
+}
+span{
+    right:15%;
+    top:2%;
+    /*position: absolute;*/
+    font-family:TimesNewRoman;
+}
+#plan{
+    right:15%;
+    top:2%;
+    position: absolute;
+    font-family:TimesNewRoman;
+}
+#imgplane{
+    /*width:50%;*/
+    height:200%;
+    position: absolute;
+}
+#notification{
+    color: red;
+    border-radius: 50%;
+    background-color: blue;
+    width: 20%;
+    position: absolute;
+    text-align: center;
+    float: inherit;
+    font-family: Arial;
+}
+#case{
+    position: relative;
+    width:70px;
+    height: 50px;;
+}
+#not{
+    padding: 0;
+}
+
+#modalTrip{
+    width: 40%;
+    height:70%;
+    margin-left: 30%;
+    background-color: whitesmoke;
+}
+#r1 {
+    height: 10%;
+    /*border: 1px solid red;*/
+    position: absolute;
+    width: 100%;
+    background-color: white;
+}
+#r2{
+    margin-top: 11%;
+    width: 100%;
+    height: 30%;
+   /* border: 1px solid green;*/
+    position: absolute;
+    background-color: white;
+}
+#r3{
+    margin-top: 40%;
+    width: 100%;
+    height: 25%;
+    /*border: 1px solid blue;*/
+    position: absolute;
+    background-color: white;
+}
+#r4{
+    margin-top: 60%;
+    width: 100%;
+    height: 10%;
+    /*border: 1px solid yellow;*/
+    position: absolute;
+    background-color: white;
+}#r5{
+     margin-top: 70%;
+     width: 100%;
+     height: 10%;
+     /*border: 1px solid yellow;*/
+     position: absolute;
+     background-color: white;
+    text-align: center;
+ }
+#friend_pic{
+    border-radius: 50%;
+    width: 7%;
+    height: 20%;
+}
+#row{
+    padding: 1%;
+}
+
+

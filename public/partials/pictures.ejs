@@ -1,0 +1,19 @@
+<div id="title">Pictures</div>
+<div id="container">
+    <div id="scroll">
+        <ul>
+            <li style="height:auto" ng-repeat="pic  in superhero.pictures">
+                <div class="responsive-container">
+                    <div class="dummy"></div>
+                    <div class="img-container">
+                        <img ng-src="{{pic.url}}">
+
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <input type="file" ng-model="files" ng-file-select="onFileSelect($files)" multiple>
+    <button  id="done"
+             ng-click="uploadMorePictures()"  class="md-raised buttons">Done</button>
+</div>

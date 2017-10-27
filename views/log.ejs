@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>Try v1.2 Bootstrap Online</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/login.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="/bower_components/angular-route/angular-route.js"></script>
+    <script class="cssdeck" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script class="cssdeck" src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+
+    <script src="/javascripts/newUser.js"></script>
+
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+<div class="contains">
+    <div class="navbar-header">
+        <a class="navbar-brand" data-toggle="tab" href="/home">EPickPlace</a>
+    </div>
+    <ul class="nav navbar-nav">
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">LOGIN/REGISTER<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a data-toggle="tab" href="#login">User</a></li>
+                <li><a data-toggle="tab" href="#loginhost">Host</a></li>
+
+            </ul>
+        </li>
+        <!--<li><a href="/home/profile">Page 2</a></li>-->
+    </ul>
+</div>
+
+</nav>
+
+<div ng-view ></div>
+
+
+
+
+</body>
+</html>

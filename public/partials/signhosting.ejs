@@ -1,0 +1,80 @@
+<div class="container">
+    <div class="row ">
+        <div class="col-lg-3 col-md-3"></div>
+        <div class="col-lg-6 col-md-6">
+            <div class="modal-header text-center">
+                <h3>EPickPlace</h3>
+
+                <h3>{{name}}</h3>
+            </div>
+            <div class="modal-body ">
+
+                <ul id = "myTab" class = "nav nav-tabs text-center">
+                    <li class = "active" style="width:50%">
+                        <a href = "#loginhost"  data-toggle = "tab">
+                            Login</a></li>
+
+                    <li  style="width:50%"><a  href = "#registerh"  data-toggle = "tab">Register</a></li>
+
+                </ul>
+
+                <div id = "myTabContent" class = "tab-content">
+
+                    <div class = "tab-pane fade in active" id = "loginh">
+                        <div class="control-group center-block">
+                            <form name="loginForm" >
+                                <input class="col-md-12 in-height" placeholder="email" type="text" ng-model="email_log" name="email_log" id="email_log" ng-required="true"/>
+                                <input class="col-md-12 in-height" placeholder="password" type="password" ng-model="password" id="password" ng-required="true"/>
+                                <span class="email_exists" ng-show="show_login">Email or password incorrect.</span>
+                                <button  ng-click="loginUser()" ng-disabled="loginForm.$invalid" id="login" class=" col-md-12  btn btn-success">Login</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class = "tab-pane fade" id = "registerh">
+                        <div class="control-group center-block">
+
+                            <form name="myForm">
+
+                                <input class="col-md-12 in-height" placeholder="email" ng-model="email" type="text" id="email" />
+                                <input class="col-md-12 in-height" ng-model="pass" id="pass" name="pass"  placeholder="password" ng-required=""/>
+                                <input class="col-md-12 in-height" ng-model="rep" id="rep"  name="rep"    placeholder="retype password" ng-required="" pw-check="pass"/>
+                                <span class="msg-error" ng-show="myForm.rep.$error.pwmatch">Passwords don't match.</span>
+                                <span class="email_exists" ng-show="show">Email exists.</span>
+
+
+                                <button ng-click="signUser()" ng-disabled="myForm.$invalid" id="submit" class=" col-md-12  btn btn-info">Register</button>
+                                {{name}}
+                                {{hello.name}}
+                            </form>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3">
+        </div>
+
+    </div>
+</div>
+<script>
+    myApp.directive('pwCheck', [function () {
+        return {
+            require: 'ngModel',
+            scope:true,
+            link: function (scope, elem, attrs, ctrl) {
+                var firstPassword = '#' + attrs.pwCheck;
+                elem.add(firstPassword).on('keyup', function () {
+                    console.log(firstPassword);
+                    scope.$apply(function () {
+
+                        ctrl.$setValidity('pwmatch', elem.val() === $(firstPassword).val());
+                    });
+                });
+            }
+        }
+    }]);
+</script>
